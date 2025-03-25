@@ -7,11 +7,11 @@
     },
     {
       "src": "/api/(.*)",
-      "dest": "/vercel_app_lightweight.py/api/$1"
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/vercel_app_lightweight.py"
+      "dest": "/api/vercel_app_lightweight.py"
     }
   ],
   "functions": {

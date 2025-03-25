@@ -6,7 +6,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
     # Try to import the lightweight app first
-    from vercel_app_lightweight import app
+    from api.vercel_app_lightweight import app
 except Exception as e:
     try:
         # Fallback to the original app
