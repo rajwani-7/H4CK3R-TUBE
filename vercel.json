@@ -15,10 +15,11 @@
     }
   ],
   "functions": {
-    "vercel_app_lightweight.py": {
+    "api/index.py": {
+      "runtime": "python3.9",
       "memory": 512,
       "maxDuration": 10
     }
   },
   "public": true
-} 
+}
