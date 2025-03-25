@@ -1,25 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "vercel_app_lightweight.py",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.9",
-        "maxLambdaSize": "10mb",
-        "includedFiles": ["templates/**", "static/**"],
-        "pythonRequirements": "vercel-requirements.txt"
-      }
-    },
-    {
-      "src": "static/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "templates/**",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/static/(.*)",
