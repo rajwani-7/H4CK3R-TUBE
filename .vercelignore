@@ -1,0 +1,16 @@
+__pycache__/
+venv/
+.git/
+*.log
+downloads/
+node_modules/
+README.md
+start_app.bat
+start_app.sh
+setup.bat
+setup.sh
+cleanup.bat
+cleanup.sh
+download_sounds.bat
+download_favicon.bat
+download_assets.sh 

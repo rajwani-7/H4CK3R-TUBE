@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "vercel_app_lightweight.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9",
+        "maxLambdaSize": "10mb",
+        "includedFiles": ["templates/**", "static/**"],
+        "pythonRequirements": "vercel-requirements.txt"
+      }
+    },
+    {
+      "src": "static/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "templates/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/vercel_app_lightweight.py/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/vercel_app_lightweight.py"
+    }
+  ],
+  "functions": {
+    "vercel_app_lightweight.py": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  },
+  "public": true
+} 

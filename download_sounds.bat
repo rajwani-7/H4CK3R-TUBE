@@ -1,0 +1,16 @@
+@echo off
+echo Downloading sound effects...
+
+echo Downloading click sound...
+curl -L "https://www.soundjay.com/buttons/sounds/button-21.mp3" -o static/sounds/click.mp3
+
+echo Downloading success sound...
+curl -L "https://www.soundjay.com/buttons/sounds/button-35.mp3" -o static/sounds/success.mp3
+
+echo Downloading error sound...
+curl -L "https://www.soundjay.com/buttons/sounds/button-10.mp3" -o static/sounds/error.mp3
+
+echo Downloading typing sound...
+curl -L "https://www.soundjay.com/mechanical/sounds/typewriter-key-1.mp3" -o static/sounds/typing.mp3
+
+echo Sound effects downloaded successfully! 
